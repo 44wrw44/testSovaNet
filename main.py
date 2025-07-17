@@ -2,12 +2,12 @@ import uvicorn
 from fastapi import FastAPI
 import os
 
-port: int = int(os.getenv('SOVANET_PORT'))
+port: int = int(os.getenv('SOVANET_PORT', "8080"))
 
 app = FastAPI()
 
 
-@app.post("/hello")
+@app.get("/")
 async def root():
     return {"message": "Hello World"}
 
