@@ -7,7 +7,7 @@ port: int = int(os.getenv('SOVANET_PORT'))
 app = FastAPI()
 
 
-@app.get("/")
+@app.post("/hello")
 async def root():
     return {"message": "Hello World"}
 
