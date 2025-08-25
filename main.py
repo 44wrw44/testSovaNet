@@ -30,7 +30,7 @@ async def create_user(
         user: User,
 ):
     with open(f"data/{user.name}.txt", "w") as file:
-        file.write(user.model_dump())
+        file.write(str(user.model_dump()))
     return {"success": True}
 
 
