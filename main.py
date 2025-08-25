@@ -1,9 +1,8 @@
-import json
+import os
 from typing import Annotated
 
 import uvicorn
 from fastapi import FastAPI, Path, HTTPException
-import os
 from pydantic import BaseModel
 
 port: int = int(os.getenv('SOVANET_PORT', "8080"))
